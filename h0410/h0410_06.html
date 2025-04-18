@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        //자바 스크립트 선언
+        var i=0
+        function btn(){
+            var htmlData = "";
+            var hdata= "<tr><td>1</td><td>리솜리조트 캐릭터 공모전 수상작 발표</td>\
+                <td>포레스트</td><td>2023-09-15</td></tr>";
+            for(i;i<10;i++){
+                htmlData +=`<tr><td>${i+1}</td><td>리솜리조트 캐릭터 공모전 수상작 발표</td>\
+                <td>포레스트</td><td>2023-09-15</td></tr>`;
+            }
+            //document.getElementById9("tbody").innerHTML(hdata);
+            $("#tbody").html(htmlData)
+            alert("게시글 정보를 가져옵니다.");
+        }
+        
+        function insertbtn(){
+            alert("게시글이 등록되었습니다.")
+            var idata = `<tr><td>${i+1}</td><td>리솜리조트 사이트 오픈</td>\
+                <td>포레스트</td><td>2023-09-15</td></tr>1`;
+            $("#tbody").append(idata)
+            i+=1
+        }
+    </script>
+    <style>
+        table{border-top:2px solid #424242; border-bottom:2px solid #424242;
+            border-collapse: collapse; width:1000px; margin:0 auto;
+            text-align: center;
+        }
+        th,td{border-bottom: 1px solid #e3e3e3;}
+        th{height:48px;}
+        td{height:45px;}
+        .btngroup{display: flex; margin:0 auto; width:420px;}
+        .btngroup div{margin:5px;border:1px solid black; background: #efefef;
+            width:200px; height:40px; text-align:center;
+            line-height: 40px;}
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col width = "100px">
+            <col width = "600px">
+            <col width = "200px">
+            <col width = "100px">
+        </colgroup>
+        <thead>
+            <tr>
+                <td>번호</td>
+                <th>제목</th>
+                <th>리조트</th>
+                <th>등록일자</th>
+            </tr>
+        </thead>
+        <tbody id = "tbody">
+            <tr>
+                <td colspan="4">현제 데이터가 없습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btngroup">
+    <div onclick="btn()">불러오기</div>
+    <div onclick="insertbtn()">추가하기</div>
+    </div>
+</body>
+</html>
