@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;} 
+        div{width:200px; height:200px; border: 2px solid black;}
+        #container{width:800px; height:800px; border: 5px solid green; margin: 50px auto;}
+        .c0,.c1,.c2,.c3,.c4{box-sizing: border-box;}
+        .C0{background: red;  position:relative; left: 400px; top:200px; z-index: 10;}
+        .C1{background: blue; position:relative; left: 250px; top:-100px; z-index: 9;}
+        .C2{background: pink; position: relative; left:350px; top:100px;}
+        .C3{background: yellow; position: relative; left:100px; top:200px;}
+        .C4{background: aqua; position: relative; left: -400px; top:-300px;}
+    </style>
+</head>
+<body>
+    <h2 id="first">위치소개</h2>
+    <div id="container">
+        <div class="C0">0</div>
+        <div class="C1">1</div>
+        <div class="C2">2</div>
+        <div class="C3">3</div>
+        <div class="C4">4</div>
+    </div>
+
+</body>
+</html>

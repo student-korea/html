@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;} 
+        div{width:100px; height:100px; border: 2px solid black;}
+        #container{width:800px; height:3000px; border: 5px solid green;}
+        .C0{}
+        .C1{position:relative; left: 600px;top:100px;}
+        .C2{position: absolute; left:100px;top:700px;}
+        .C3{position: relative;left:400px;}
+        .C4{position: fixed;left: 1200px; top:700px}
+    </style>
+</head>
+<body>
+    <h2 id="first">위치소개</h2>
+    <div id="container">
+        <div class="C0">0</div>
+        <div class="C1">1</div>
+        <div class="C2">2</div>
+        <div class="C3">3</div>
+        <div class="C4"><a href="#first">top ↑</a></div>
+    </div>
+
+</body>
+</html>
