@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding: 0;}
+        h4{text-align: center;}
+        .move{width:400px; height:300px; border:1px solid black; margin:50px auto;}
+        .move img{width:300px;}
+        .move img:hover{animation:shape1 1s alternate infinite;}
+        @keyframes shape1{
+            from{transform:rotateY(0);}
+            to{transform: rotateY(135deg);}
+        }
+        .move1{width:400px; height:300px; border:1px solid black; margin:50px auto;}
+        .move1 img{width:300px; backface-visibility: hidden;}
+        .move1 img:hover{animation:shape1 1s alternate infinite;}
+        @keyframes shape1{
+            from{transform:rotateY(0);}
+            to{transform: rotateY(135deg);}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="move">
+            <h4>뒷배경1</h4>
+            <img src="images/kim.jpg">
+
+        </div>
+        <div class="move1">
+            <h4>뒷배경2</h4>
+            <img src="images/kim.jpg">
+
+        </div>
+    </div>
+</body>
+</html>
