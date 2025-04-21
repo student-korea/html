@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0px; padding: 0px; text-align: center; margin: 0 auto; font-size: 17px;}
+        section{display: flex;}
+        nav{width:100%; height:100px; background:blue;color:white; margin-bottom: 20px; }
+        .banner{width:100%; height:400px; background:url(images/resom.png) no-repeat 0 -440px;  color:white; margin-bottom: 20px;}
+        .news{width:55%; height:300px; background:gray;color:white; margin: 0 20px 20px 0;}
+        .img{width:45%; height:300px; background:green;color:white; margin-bottom: 20px;}
+        footer{width:100%; height:100px; background:orange;color:white; }
+        @media screen and(max-width:800px){
+            .banner{ background: url(images/resom2.png) no-repeat 0 -550px;}
+            section{flex-direction: column;}
+            .news{width:100%;height:300px; background: gray;}
+            .img{width:100%;height:300px; background: green;}
+        }
+    </style>
+</head>
+<body>
+    <nav>상단부분</nav>
+    <div class="banner">배너부분</div>
+    <section>
+        <div class="news">뉴스부분</div>
+        <div class="img">이미지부분</div>
+    </section>
+    <footer>푸터부분</footer>
+</body>
+</html>

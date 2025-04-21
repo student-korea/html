@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        div{box-sizing: border-box;}
+        section{display:flex;}
+        .top{width:100%;height: 200px; background:url('images/kim.jpg') no-repeat;background-size: cover;}
+        
+        .left{width:80%;height: 500px; background:yellow;}
+        .left img{width:100%;}
+        .right{width:20%;height: 500px; background:green;}
+        .under{width:100%;height: 100px; background:red;}
+        @media screen and (max-width:800px) {
+            .right{display:none;}
+            .sect-left{width:100%;}
+            .top{background: url(images/2.jpg) no-repeat;}
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="container">
+        <div class="top">상단TOP 부분</div>
+        <section>
+            <div class="left"></div>
+            <div class="right">오른쪽 부분</div>
+        </section>
+        <div class="under">하단FOOTER 부분</div>
+
+    </div>
+</body>
+</html>
