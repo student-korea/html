@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        div{width:100px; height:50px; border:1px solid black;
+            text-align: center; line-height: 49px;}
+    </style>
+</head>
+<body>
+    <h2 id="bmi">BMI 계산하기</h2>
+    <label>신장</label>
+    <input type="text" name="height" id="height">
+    <label>cm</label>
+    <br>
+    <label>체중</label>
+    <input type="text" name="weight" id="weight">
+    <label>kg</label>
+    <button onclick="calBtn()">계산하기</button>
+    <div id = "result">0</div>
+    <div id = "result2">정상</div>
+    <script>
+        function calBtn(){
+            alert("계산하기 실행");
+            let height =document.querySelector("#height").value;
+            let weight = document.querySelector("#weight").value;
+            let height2 = height/100;
+            let result = weight / (height2*height2);
+            document.querySelector("#result").innerText = result;
+
+            console.log("키 : "+(document.querySelector("#height").value));
+            console.log("몸무게 : "+(document.querySelector("#weight").value));
+            console.log("결과값 : "+result);
+            console.log("글자 : ",document.querySelector("#bmi").innerText);
+            if(result>=30){
+                document.querySelector("result2").innerText="고도비만";
+            }else if(result>=25){
+                document.querySelector("result2").innerText="비만";
+            }else if(result>=23){
+                document.querySelector("result2").innerText="과체중";
+            }else if(result>=18.5){
+                document.querySelector("result2").innerText="정상";
+            }else{
+                document.querySelector("result2").innerText="저체중";
+            }
+        }
+
+        /*
+        let weight = prompt("체중을 입력하세요. ");
+        let height = prompt("키를 입력하세요.(cm) ");
+
+        height=Number(height)/100;
+        console.log(weight/(height*height));
+        */
+
+        /*
+        let kor = prompt("국어점수를 입력하세요. ");
+        let eng = prompt("영어점수를 입력하세요. ");
+        let math = prompt("수학점수를 입력하세요. ");
+        console.log(Number(kor) +Number(eng)+Number(math),(Number(kor) +Number(eng)+Number(math))/3);
+        */
+    </script>
+</body>
+</html>
