@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{border:1px solid black; border-collapse: collapse; text-align: center;}
+        th,td{width:150px; height:40px;}
+    </style>
+</head>
+<body>
+    <h2>랜덤숫자 정답</h2>
+    <table>
+        <tr>
+            <th>정답</th>
+            <td id = "ran1"></td>
+        </tr>
+    </table>
+    <h2>입력숫자 정답</h2>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>입력값</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+        let ran =parseInt(100*Math.random()+1);
+        let input=0;
+        let arr=[];
+        let data=" ";
+        
+        for (i=1;i<=5;i++){
+            input = prompt("number?");
+            arr.push(input);
+            if (ran == input){
+                alert("같습니다.")
+                break;
+            }else if (ran >= input){
+                alert("보다 작습니다.")
+            } else {
+                alert("보다 큽니다.")
+            }
+        }
+        for (i=0;i<=4;i++){
+            data+=`<tr><td>${i+1}</td><td>${arr[i]}</td></tr>`;
+        }document.querySelector("#tbody").innerHTML=data;
+        document.querySelector("#ran1").innerText = ran;
+
+        /*for(let i=0;i<arr1.length;i++){
+        let ran1= parseInt(45*Math.random()+1);
+        let arr1=[];
+        let input=0;
+        for(let i=1;i<=5;i++){
+            input = prompt("number? ");
+            arr1.push(input);
+            if (ran1 >= input){
+                alert("숫자가 작다.");
+            } else if (ran1 == input){
+                alert("숫자가 같다.");
+                break;
+            } else {
+                alert("숫자가 크다.");
+            }
+        }
+        document.write("정답 ",ran1,"<br>");
+        document.write("정답 ");
+        for(let i=0;i<arr1.length;i++){
+            document.write(arr1[i]," ");;
+        }
+        
+            document.write(arr1[i],"<br>");;
+        }*/
+        
+
+    </script>
+</body>
+</html>

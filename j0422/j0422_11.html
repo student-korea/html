@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*
+        let a = 30;
+        let b = 50;
+        let c = 51;
+        let result = a>b?(a>c?a:c):(b>c?b:c);
+        document.write(result,"<br>");
+
+        let result1 = Math.max(a,b,c);
+        document.write(result1,"<br>");
+
+        // 소수점 : round()-반올림, ceil()-올림, floor()-버림
+        document.write(Math.round(1.579),"<br>");
+
+        // 소수점 3자리에서 반올림 하시오. 1.579*100/100
+        document.write(Math.round(1.579*100)/100,"<br>");
+        
+        //소수점 2자리에서 반올림 하시오. 18.79
+        document.write(Math.round(18.79*10)/10,"<br>");
+        let random = Math.random();
+        document.write(parseInt(45*Math.random()+1),"<br>"); // 1~45
+        document.write(parseInt(10*Math.random()),"<br>"); // 0~9
+        
+        document.write(parseInt(10*Math.random()+1),"<br>");
+        document.write(parseInt(10*Math.random()+1),"<br>");
+        document.write(parseInt(10*Math.random()+1),"<br>");
+        */
+        let ran1= parseInt(10*Math.random()+1);
+        let input = 0;
+        for (let i=1; i<=5;i++){
+            input = prompt("number? ");
+            if (ran1 >= input){
+                alert("숫자가 작다.");
+            } else if (ran1 == input){
+                alert("숫자가 같다.");
+                break;
+            } else {
+                alert("숫자가 크다.");
+            }
+        }
+        document.write("정답 ",ran1,"<br> 입력값 ",input);
+        /*let a="";
+        for (let i=2;i<=10;i=i+2){
+            document.write(i,"<br>");
+        } */
+    </script>
+</body>
+</html>
