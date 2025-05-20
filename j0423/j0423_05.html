@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{border:1px solid black; margin:20px auto;
+            width:600px; height:200px;
+            font-size: 40px; text-align: center;
+            line-height: 200px;
+        }button{width:150px; height:40px; text-align: center;
+        display: block; margin:5px auto;}
+    </style>
+</head>
+<body>
+    <div id="txt"></div>
+    <button id="start">시간진행</button>
+    <button id="stop">시간멈춤</button>
+    <script>
+        getClock();
+        
+        document.querySelector("#start").onclick=start;
+        document.querySelector("#stop").onclick=stop;
+        function getClock(){
+            let today = new Date();
+            let month = today.getMonth()+1
+            let date = today.getDate(); 
+            let hours = today.getHours(); 
+            let minutes = today.getMinutes(); 
+            let seconds = today.getSeconds(); 
+            let txt = today.getFullYear()+"-"+(month<10?"0"+month:month)+"-"+ (date<10?"0"+date:date)+" "+(hours<10?"0"+hours:hours)+":"+(minutes<10?"0"+minutes:minutes)+":"+(seconds<10?"0"+seconds:seconds);
+            document.querySelector("#txt").innerHTML=txt;
+        }
+        function start(){
+            timer = setInterval(getClock,1000);
+        }
+        function stop(){
+            clearInterval(timer);
+        }
+        
+    </script>
+</body>
+</html>
