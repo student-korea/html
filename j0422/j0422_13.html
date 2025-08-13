@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{border:1px solid black; border-collapse: collapse; text-align: center;}
+        th,td{width:150px; height:40px;}
+    </style>
+</head>
+<body>
+    <h2>랜덤숫자 정답</h2>
+    <table>
+        <tr>
+            <th>정답</th>
+            <td id = "ran1"></td>
+        </tr>
+    </table>
+    <h2>입력숫자 정답</h2>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>입력값</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+        let arr=[];
+        let data=" ";
+        let i=1;
+        while(i<=6){
+            let ran =parseInt(10*Math.random()+1);
+            if(arr.indexOf(ran) <0){
+                arr.push(ran);
+                i+=1;
+            }
+        }
+        for (i=0;i<=4;i++){
+            data+=`<tr><td>${i+1}</td><td>${arr[i]}</td></tr>`;
+        }document.querySelector("#tbody").innerHTML=data;    
+
+    </script>
+</body>
+</html>
